@@ -19,12 +19,12 @@ categoria Pior Filme do Golden Raspberry Awards.
 
 ```bash
 npm install
-
+````
 2. Execute o servidor de desenvolvimento:
 
 ```bash
 npm run start
-```
+````
 
 3. Acesse a API em `http://localhost:3000`.
 
