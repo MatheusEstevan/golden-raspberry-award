@@ -13,7 +13,7 @@ export class ProducerService {
 
     winners.forEach((movie) => {
       const producers = movie.producers
-        .split(/;| and /)
+        .split(/, | and /)
         .map((p) => p.trim());
 
       producers.forEach((producer) => {
@@ -29,7 +29,7 @@ export class ProducerService {
     Object.entries(producerWins).forEach(([producer, years]) => {
       if (years.length < 2) return;
 
-      const sorted = years.sort((a, b) => a - b);
+      const sorted = [...years].sort((a, b) => a - b);
       for (let i = 0; i < sorted.length - 1; i++) {
         intervals.push({
           producer,
